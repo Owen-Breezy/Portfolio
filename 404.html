@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Owen Breezy</title>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  min-height:100vh;
+  background: radial-gradient(1200px 600px at 50% -10%, rgba(0,171,240,0.18), transparent 60%), #070e1a;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Poppins',sans-serif;color:#e9eef2;overflow:hidden
+}
+.grain{position:fixed;inset:0;background-image:url("https://grainy-gradients.vercel.app/noise.svg");opacity:.04;pointer-events:none}
+.card{
+  width:min(680px,90vw);padding:56px 48px 42px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  backdrop-filter:blur(28px) saturate(140%);-webkit-backdrop-filter:blur(28px) saturate(140%);
+  border:1px solid rgba(255,255,255,0.12);border-radius:36px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.12);
+  text-align:center;position:relative;overflow:hidden
+}
+.eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:22px}
+h1{
+  font-family:'Playfair Display', serif;font-size:132px;font-weight:700;line-height:.9;letter-spacing:-4px;
+  color:rgba(255,255,255,0.06);-webkit-text-stroke:1px rgba(255,255,255,0.18);
+  background:linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.08);border-radius:28px;padding:24px 0;
+  position:relative;overflow:hidden;
+  text-shadow:0 0 40px rgba(0,171,240,0.25);
+}
+h1::after{
+  content:'';position:absolute;top:0;left:-120%;
+  width:60%;height:100%;
+  background:linear-gradient(110deg, transparent 0%, rgba(255,255,255,0.0) 20%, rgba(255,255,255,0.35) 50%, transparent 100%);
+  animation:shine 3.8s ease-in-out infinite;
+}
+@keyframes shine{0%{left:-120%}60%{left:130%}100%{left:130%}}
+h2{font-family:'Playfair Display', serif;font-size:32px;font-weight:400;margin:28px 0 12px}
+h2 em{font-style:italic;color:#00abf0}
+p{color:#a8b7c3;font-weight:300;line-height:1.7;font-size:15.5px;max-width:440px;margin:0 auto 30px}
+.divider{width:40px;height:1px;background:rgba(255,255,255,0.15);margin:0 auto 30px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:100px;background:#ededed;color:#070e1a;text-decoration:none;font-weight:600;font-size:14px;transition:.35s}
+.btn:hover{background:#00abf0;color:white;transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,171,240,0.35)}
+.small{margin-top:22px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.28)}
+@media(max-width:500px){.card{padding:36px 24px;border-radius:28px}h1{font-size:84px}h2{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div class="card">
+  <div class="eyebrow">Error — Page Not Found</div>
+  <h1>404</h1>
+  <h2>The page is <em>not available</em></h2>
+  <div class="divider"></div>
+  <p>Looks like you typed in the wrong path, but don't worry the page exists. Let's guide you back to something refined.</p>
+  <a href="https://www.owenbreezy.vercel.app" class="btn"><i class='bx bx-arrow-back'></i> Return Home</a>
+  <div class="small">Owen Breezy Studio © 2026</div>
+</div>
+</body>
+</html>
